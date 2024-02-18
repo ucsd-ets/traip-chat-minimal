@@ -9,6 +9,8 @@ const { Link } = Typography
 
 const { Header } = Layout
 
+let appName = process.env.WEBCHAT_APP_NAME || 'ChatGPT Minimal'
+
 const HeaderBar = () => {
   return (
     <>
@@ -16,7 +18,7 @@ const HeaderBar = () => {
         <div className={styles.logoBar}>
           <Link href="/">
             <img alt="logo" src="/logo192.png" />
-            <h1>ChatGPT Minimal</h1>
+            <h1>${appName}</h1>
           </Link>
         </div>
         <Space className={styles.right} size={0}>
